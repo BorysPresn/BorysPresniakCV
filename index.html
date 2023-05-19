@@ -10,32 +10,40 @@
 <body>
     <div class="container">
         <aside class="aside">
-            <div class="aside-photo">
-                <img src="./images/photo.jpg" alt="photo" width="370px">
-            </div>
-            <div class="aside-item contacts">
-                <h2 class="aside-title">Contacts</h2>
-                <p class="contact-text">
-                    Tel: <a href="tel: +48729449643">+48 729 449 643</a><br> 
-                    E-mail: <a href="mailto: boryspresniak@gmail.com">boryspresniak@gmail.com</a>
-                </p>
-            </div>
-            <div class="aside-item skills">
-                <h2 class="aside-title">Tech Skills</h2>
-                <ul>
-                    <li class="skills-item">HTML5</li>
-                    <li class="skills-item">CSS3</li>
-                    <li class="skills-item">JavaScript</li>
-                </ul>
-            </div>
-            <div class=" aside-item soft_skills skills">
-                <h2 class="aside-title">Soft Skills</h2>
-                <ul>
-                    <li class="skills-item">Collaboration and Teamwork</li>
-                    <li class="skills-item">Communicability</li>
-                    <li class="skills-item">Problem resolving</li>
-                    <li class="skills-item">Adaptativity to changes</li>
-                </ul>
+            <p class="info" onclick="document.getElementsByClassName('aside')[0].classList.toggle('open');
+                                    document.getElementsByClassName('info')[0].style.display = 'none';
+                                    document.getElementsByClassName('scale')[0].style.transform = 'scale(1)';">SHOW MORE INFO</p>
+            <div class="scale">
+                <div class="aside-photo">
+                    <img src="./images/photo.jpg" alt="photo" width="370px">
+                </div>
+                <div class="aside-item contacts">
+                    <h2 class="aside-title">Contacts</h2>
+                    <p class="contact-text">
+                        Tel: <a href="tel: +48729449643">+48 729 449 643</a><br> 
+                        E-mail: <a href="mailto: boryspresniak@gmail.com">boryspresniak@gmail.com</a>
+                    </p>
+                </div>
+                <div class="aside-item skills">
+                    <h2 class="aside-title">Tech Skills</h2>
+                    <ul>
+                        <li class="skills-item">HTML5</li>
+                        <li class="skills-item">CSS3</li>
+                        <li class="skills-item">JavaScript</li>
+                    </ul>
+                </div>
+                <div class=" aside-item soft_skills skills">
+                    <h2 class="aside-title">Soft Skills</h2>
+                    <ul>
+                        <li class="skills-item">Collaboration and Teamwork</li>
+                        <li class="skills-item">Communicability</li>
+                        <li class="skills-item">Problem resolving</li>
+                        <li class="skills-item">Adaptativity to changes</li>
+                    </ul>
+                </div>
+                <div class="hide" onclick="document.getElementsByClassName('aside')[0].classList.toggle('open');
+                                            document.getElementsByClassName('info')[0].style.display = 'block';
+                                            document.getElementsByClassName('scale')[0].style.transform = 'scale(0)';">Hide</div>
             </div>
         </aside>
         <main class="main">
