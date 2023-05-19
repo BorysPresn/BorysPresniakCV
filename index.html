@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Borys Presniak CV</title>
+</head>
+<body>
+    <div class="container">
+        <aside class="aside">
+            <div class="aside-photo">
+                <img src="./images/photo.jpg" alt="photo" width="370px">
+            </div>
+            <div class="aside-item contacts">
+                <h2 class="aside-title">Contacts</h2>
+                <p class="contact-text">
+                    Tel: <a href="tel: +48729449643">+48 729 449 643</a><br> 
+                    E-mail: <a href="mailto: boryspresniak@gmail.com">boryspresniak@gmail.com</a>
+                </p>
+            </div>
+            <div class="aside-item skills">
+                <h2 class="aside-title">Tech Skills</h2>
+                <ul>
+                    <li class="skills-item">HTML5</li>
+                    <li class="skills-item">CSS3</li>
+                    <li class="skills-item">JavaScript</li>
+                </ul>
+            </div>
+            <div class=" aside-item soft_skills skills">
+                <h2 class="aside-title">Soft Skills</h2>
+                <ul>
+                    <li class="skills-item">Collaboration and Teamwork</li>
+                    <li class="skills-item">Communicability</li>
+                    <li class="skills-item">Problem resolving</li>
+                    <li class="skills-item">Adaptativity to changes</li>
+                </ul>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="about">
+                <button onclick="window.print()">Print or Get PDF</button>
+                <h4 class="about-subtitle">Front-End Developer</h4>
+                <h1 class="about-title">Borys Presniak</h1>
+                <p class="about-text">
+                    Beginner Front-End developer from Ukraine. I'm really like programming, especialy I like games and to develope games. I have expirience in HTML, CSS, JavaScript and I actively keep studing. I'm cheerful and sociable person, who like to work in team. <br>
+                    I have plans to learn <b>ReactJS, GIT, NodeJS and Angular</b> in a short future or something else if it will needed in my work.
+                </p>
+            </div>
+            <div class="projects">
+                <h2 class="projects-title">Projects</h2>
+                <ul>
+                    <li class="projects-item">
+                        <a href="https://mapstars.netlify.app" target="_blank">
+                            <img src="./images/mapstars_screen-shot.png" alt="mapstars screenshot">
+                        </a>
+                    </li>
+                    <li class="projects-item">
+                        <a href="https://findmatchescardgame.netlify.app" target="_blank">
+                            <img src="./images/card-game_screen-shot.png" alt="card game screenshot">
+                        </a>
+                    </li>
+                    <li class="projects-item">
+                        <a href="https://mariiapresniak.netlify.app/" target="_blank">
+                            <img src="./images/maria.png" alt="mariiapresniak">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="work_expirience">
+                <h2 class="work_expirirence-title">Work Expirience</h2>
+                <p>I have no commercial experience yet, but I really hope I can gain some soon.</p>            
+            </div>
+            <div class="education">
+                <h2 class="education-title">Education</h2>
+                <ul>
+                    <li class="education-item">
+                        <h3 class="education_subtitle orange">IT Step Academy Ukraine</h3>
+                        <h4 class="education-prof">Front-End Development</h4>
+                        <p class="education_period">June 2021 - December 2021 <span class="bold">|</span> Ukraine</p>
+                    </li>
+                    <li class="education-item">
+                        <h3 class="education_subtitle orange">Educational platform Stepik</h3>
+                        <h4 class="education-prof">C programming basics</h4>
+                        <p class="education_period">September 2020 - December 2020 <span class="bold">|</span> Online course</p>
+                        <p class="show-certificate">Show certificate
+                            <a href="http://stepik.org/cert/847790" target="_blank" rel="noopener noreferrer"><img src="./images/certificate.png" alt="certificate"></a>
+                        </p>
+                    </li>
+                    <li class="education-item">
+                        <h3 class="education_subtitle orange">Taurida State Agrotechnological University</h3>
+                        <h4 class="education-prof">Technical Service In The Agro-Industrial Complex</h4>
+                        <p class="education_period">September 2009 - June 2013 <span class="bold">|</span> Ukraine</p>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+        function saveAsPDF() {
+            // Создание экземпляра jsPDF
+            const doc = new jsPDF();
+
+            // Получение содержимого вашей веб-страницы
+            const resume = document.getElementById('resume').innerHTML;
+
+            // Генерация PDF из HTML
+            doc.fromHTML(resume, 15, 15);
+
+            // Сохранение PDF
+            doc.save('resume.pdf');
+        }
+    </script>
+    
+</body>
+</html>
