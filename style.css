@@ -266,7 +266,7 @@ h3 {
     transform: scale(1);
 }
 .aside p.info{
-    transform: scale(0);
+    display: none;
 }
 .open{
     width: 50%!important;
@@ -365,7 +365,7 @@ h3 {
         transition: 0.3s;
     }
     .aside p.info{
-        transform: scale(1);
+        display: block;
         color: #fff!important;
         transform: rotate(-90deg);
         white-space: nowrap;
