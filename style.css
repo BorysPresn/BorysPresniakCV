@@ -138,6 +138,11 @@ h3{
     top: 20px;
     right: 20px;
     color: #595959;
+    cursor: pointer;
+}
+.about button:hover{
+    box-shadow: 0 0 10px #59595970;
+    background-color: #59595930;
 }
 .about-subtitle {
 }
