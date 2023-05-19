@@ -105,21 +105,6 @@
             </div>
         </main>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
-        function saveAsPDF() {
-            // Создание экземпляра jsPDF
-            const doc = new jsPDF();
-
-            // Получение содержимого вашей веб-страницы
-            const resume = document.getElementById('resume').innerHTML;
-
-            // Генерация PDF из HTML
-            doc.fromHTML(resume, 15, 15);
-
-            // Сохранение PDF
-            doc.save('resume.pdf');
-        }
-    </script>
     
 </body>
 </html>
