@@ -87,9 +87,11 @@ h3 {
     position: relative;
     text-decoration: none;
     color: #FFFFFF;
-    opacity: 0.5;
+    opacity: 1;
     margin-left: 5px;
     transition: 0.3s;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .contacts a::after {
@@ -146,19 +148,23 @@ h3 {
     gap: 20px;
 }
 
-.about button {
-    box-shadow: 0 0 5px #59595950;
-    border-radius: 7px;
-    transition: 0.3s;
-    overflow: hidden;
-    border: none;
-    padding: 8px 22px;
-    align-self: center;
+
+.social{
+    display: flex;
+    gap: 12px;
     position: absolute;
     top: 20px;
     right: 20px;
-    color: #595959;
-    cursor: pointer;
+}
+
+.social a{
+    width: 27px;
+    height: 27px;
+
+}
+
+.social a img{
+    width: 100%;
 }
 
 .about button:hover {
@@ -166,7 +172,6 @@ h3 {
     background-color: #59595930;
 }
 
-.about-subtitle {}
 
 .about-title {
     font-weight: 700;
@@ -222,20 +227,6 @@ h3 {
     background-color: #59595910;
 }
 
-.work_expirience {}
-
-.work_expirirence-title {}
-
-.work-place {}
-
-.work_place-posititon {}
-
-.work_period {}
-
-.work_place-respons {}
-
-.education {}
-
 .education ul {
     list-style-type: none;
     display: flex;
@@ -260,6 +251,7 @@ h3 {
     left: 10%;
     transform: scale(0);
     transition: 0.3s;
+    z-index: 1;
 }
 
 .show-certificate:hover img {
@@ -293,7 +285,7 @@ h3 {
     flex-direction: column;
     gap: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 795px) {
     .main {
         gap: 25px;
     }
@@ -306,12 +298,7 @@ h3 {
     .about-title {
         font-size: 28px;
     }
-    .about button {
-        padding: 3px 7px;
-        top: 5px;
-        right: 5px;
-        font-size: 8px;
-    }
+    
     body {
         font-size: 10px;
         line-height: 130%;
@@ -325,8 +312,11 @@ h3 {
     .container {
         gap: 0px;
     }
+    .projects-item{
+        max-width: 200px;
+    }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
     .main {
         gap: 18px;
     }
@@ -346,7 +336,15 @@ h3 {
     .about-title {
         font-size: 22px;
     }
-    
+    .social{
+        top: 10px;
+        right: 10px;
+        gap: 8px;
+    }
+    .social a{
+        width: 20px;
+        height: 20px;
+    }
     body {
         font-size: 10px;
         line-height: 130%;
